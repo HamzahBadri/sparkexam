@@ -1,12 +1,14 @@
 package au.com.nuvento.sparkExam
 
 import org.apache.log4j._
-import org.apache.spark.sql.SparkSession
+import org.apache.spark.sql.{SaveMode, SparkSession}
 import org.apache.spark.sql.functions._
 
 object CreateCustomerAccountOutput {
 
-  case class CustomerDataset(customerId: String, forename: String, surname: String)
+  case class CustomerData(customerId: String, forename: String, surname: String)
+
+  case class AccountData(customerId: String, accountId: String, balance: Long)
 
   def main(args: Array[String]): Unit = {
 
@@ -20,11 +22,43 @@ object CreateCustomerAccountOutput {
 
     // Load each line of the source data into an Dataset
     import spark.implicits._
-    val ds = spark.read
+    val accountDataset = spark.read
+      .option("header", "true")
+      .option("inferSchema", "true")
+      .csv("data/account_data.txt")
+      .as[AccountData]
+
+    // Load each line of the source data into an Dataset
+    val customerDataset = spark.read
       .option("header", "true")
       .option("inferSchema", "true")
       .csv("data/customer_data.txt")
-      .as[CustomerDataset]
+      .as[CustomerData]
+
+    var customerAccountDictionary: Map[String, Seq[AccountData]] = Map()
+
+    for (customerLine <- customerDataset.collect()) {
+      val customerLineId = customerLine.customerId
+      val customerAccounts = accountDataset.filter($"customerId" === customerLineId)
+      val accountList = customerAccounts.collect().toSeq
+      customerAccountDictionary += (customerLineId -> accountList)
+    }
+
+    val customerAccounts = customerDataset.map(row => {
+      val accounts = customerAccountDictionary(row.customerId)
+      val numberAccounts = accounts.length
+      (row.customerId, row.forename, row.surname, accounts, numberAccounts)
+    }).toDF("customerId", "forename", "surname", "accounts", "numberAccounts")
+
+    val balanceDatabase = accountDataset.groupBy("customerId").agg(
+      sum("balance").alias("totalBalance"),
+      avg("balance").alias("averageBalance"))
+
+    val customerAccountOutput = customerAccounts
+      .join(balanceDatabase, Seq("customerId"), "left")
+
+    //customerAccountOutput.show(truncate = false)
+    customerAccountOutput.write.mode(SaveMode.Overwrite).parquet("data/CustomerAccountOutput")
   }
 
 }
