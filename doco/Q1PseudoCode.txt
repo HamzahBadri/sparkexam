@@ -1,0 +1,26 @@
+READ data from "/data/customer_data"
+SET customerDataset as data
+READ data from "/data/account_data"
+SET accountDataset as data
+
+SET accountDictionary as empty
+REPEAT
+  SET customerLine by reading line in customerDataset
+  SET id as customerLine.customerId
+  SET idAccounts as empty
+  REPEAT
+    SET accountLine by reading line in accountDataset
+    IF accountLine.customerId == id
+	  SET idAccounts as idAccounts + accountLine
+	ENDIF
+  UNTIL end of accountDataset
+  SET accountDictionary.id as idAccounts
+UNTIL end of customerDataset
+
+SET accounts as accountDictionary(customerId) for each customerId in customerDataset
+SET numberAccounts as account.length for each account in accounts
+SET totalBalance as SUM of balance from accountDataset GROUP BY customerId
+SET averageBalance as AVG of balance from accountDataset GROUP BY customerId
+
+SET customerAccountOutput as (customerDataset + accounts + numberAccounts) LEFT JOIN totalBalance LEFT JOIN averageBalance
+WRITE customerAccountOutput to "/data/CustomerAccountOutput"

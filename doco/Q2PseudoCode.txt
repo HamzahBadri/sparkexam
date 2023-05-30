@@ -1,0 +1,33 @@
+READ data from "/data/address_data"
+SET addressDataset as data
+READ data from "/data/CustomerAccountOutput"
+SET customerAccounts as data
+
+SET parsedAddressDataset as empty
+REPEAT
+  SET accountLine by reading line in accountDataset
+  SET fields as accountLine.address split by ", "
+  SET streetNumber as fields(0)
+  SET street as fields(1)
+  SET city as fields(2)
+  SET country as fields(3)
+  SET parsedAddressDataset as parsedAddressDataset + (accountId, customerId, streetNumber, street, city, country)
+UNTIL end of customerDataset
+
+SET addressDictionary as empty
+REPEAT
+  SET customerLine by reading line in customerAccounts
+  SET id as customerLine.customerId
+  SET idAddresses as empty
+  REPEAT
+    SET addressLine by reading line in parsedAddressDataset
+    IF addressLine.customerId == id
+	  SET idAddresses as idAddresses + addressLine
+	ENDIF
+  UNTIL end of addressDataset
+  SET addressDictionary.id as idAddresses
+UNTIL end of customerDataset
+
+SET address as addressDictionary(customerId) for each customerId in customerAccounts
+SET customerDocument as customerAccounts + address
+WRITE customerAccountOutput to "/data/CustomerDocument"
