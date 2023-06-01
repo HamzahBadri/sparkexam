@@ -1,5 +1,6 @@
 package au.com.nuvento.sparkExam
 
+import com.typesafe.config.ConfigFactory
 import org.apache.log4j._
 import org.apache.spark.sql.SparkSession
 import org.apache.spark.sql.functions._
@@ -9,6 +10,12 @@ object CreateCustomerAccountOutput {
   def main(args: Array[String]): Unit = {
 
     Logger.getLogger("org").setLevel(Level.ERROR)
+
+    val config = ConfigFactory.load("application.conf")
+      .getConfig("au.com.nuvento.sparkExam")
+    val customerPath = config.getString("customerPath")
+    val accountPath = config.getString("accountPath")
+    val customerAccountOutputPath = config.getString("customerAccountOutputPath")
 
     val spark = SparkSession
       .builder
@@ -21,14 +28,14 @@ object CreateCustomerAccountOutput {
     val accountDataset = spark.read
       .option("header", "true")
       .option("inferSchema", "true")
-      .csv("data/account_data.txt")
+      .csv(accountPath)
       .as[AccountData]
 
     // Load each line of the source data into an Dataset
     val customerDataset = spark.read
       .option("header", "true")
       .option("inferSchema", "true")
-      .csv("data/customer_data.txt")
+      .csv(customerPath)
       .as[CustomerData]
 
     var customerAccountDictionary: Map[String, Seq[AccountData]] = Map()
@@ -40,22 +47,24 @@ object CreateCustomerAccountOutput {
       customerAccountDictionary += (customerLineId -> accountList)
     }
 
-    val customerAccounts = customerDataset.map(row => {
-      val accounts = customerAccountDictionary(row.customerId)
-      val numberAccounts = accounts.length
-      (row.customerId, row.forename, row.surname, accounts, numberAccounts)
-    }).toDF("customerId", "forename", "surname", "accounts", "numberAccounts")
+    val lookupAccount: String => Seq[AccountData] = (customerId: String) => {
+      customerAccountDictionary(customerId)
+    }
+    val lookupAccountUdf = udf(lookupAccount)
 
-    val balanceDatabase = accountDataset.groupBy("customerId").agg(
+    val accountInfoDatabase = accountDataset.groupBy("customerId").agg(
+      count("customerId").alias("numberAccounts"),
       sum("balance").alias("totalBalance"),
       avg("balance").alias("averageBalance"))
 
-    val customerAccountOutput = customerAccounts
-      .join(balanceDatabase, Seq("customerId"), "left")
+    val customerAccountOutput = customerDataset
+      .withColumn("accounts", lookupAccountUdf(col("customerId")))
+      .join(accountInfoDatabase, Seq("customerId"), "left")
+      .na.fill(0)
       .as[CustomerAccountOutput]
 
     customerAccountOutput.show(false)
-    customerAccountOutput.write.mode("overwrite").parquet("data/CustomerAccountOutput")
+    customerAccountOutput.write.mode("overwrite").parquet(customerAccountOutputPath)
   }
 
 }
