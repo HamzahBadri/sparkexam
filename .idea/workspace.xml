@@ -5,11 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b42012cf-cb54-406c-8403-0b6c5538f68e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/scala/au/com/nuvento/sparkExam/CreateCustomerDocument.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/au/com/nuvento/sparkExam/AccountData.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/au/com/nuvento/sparkExam/CustomerAccountOutput.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/au/com/nuvento/sparkExam/CustomerData.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/au/com/nuvento/sparkExam/CustomerDocument.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/au/com/nuvento/sparkExam/App.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/au/com/nuvento/sparkExam/App.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/au/com/nuvento/sparkExam/Address.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/au/com/nuvento/sparkExam/Address.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/au/com/nuvento/sparkExam/AddressData.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/au/com/nuvento/sparkExam/AddressData.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/au/com/nuvento/sparkExam/CreateCustomerAccountOutput.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/au/com/nuvento/sparkExam/CreateCustomerAccountOutput.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/au/com/nuvento/sparkExam/CreateCustomerDocument.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/au/com/nuvento/sparkExam/CreateCustomerDocument.scala" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +33,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Package Object" />
+        <option value="Scala Class" />
       </list>
     </option>
   </component>
@@ -95,6 +101,18 @@
       <option name="presentableId" value="Default" />
       <updated>1684802585033</updated>
     </task>
+    <task id="LOCAL-00001" summary="Spark issues resolved except parquet">
+      <created>1685451613409</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1685451613409</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Spark issues resolved except parquet" />
+    <option name="LAST_COMMIT_MESSAGE" value="Spark issues resolved except parquet" />
   </component>
 </project>

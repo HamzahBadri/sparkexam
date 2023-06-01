@@ -1,14 +1,10 @@
 package au.com.nuvento.sparkExam
 
 import org.apache.log4j._
-import org.apache.spark.sql.{SaveMode, SparkSession}
+import org.apache.spark.sql.SparkSession
 import org.apache.spark.sql.functions._
 
 object CreateCustomerAccountOutput {
-
-  case class CustomerData(customerId: String, forename: String, surname: String)
-
-  case class AccountData(customerId: String, accountId: String, balance: Long)
 
   def main(args: Array[String]): Unit = {
 
@@ -56,9 +52,10 @@ object CreateCustomerAccountOutput {
 
     val customerAccountOutput = customerAccounts
       .join(balanceDatabase, Seq("customerId"), "left")
+      .as[CustomerAccountOutput]
 
-    //customerAccountOutput.show(truncate = false)
-    customerAccountOutput.write.mode(SaveMode.Overwrite).parquet("data/CustomerAccountOutput")
+    customerAccountOutput.show(false)
+    customerAccountOutput.write.mode("overwrite").parquet("data/CustomerAccountOutput")
   }
 
 }

@@ -1,4 +1,4 @@
-package com.sundogsoftware.spark
+package au.com.nuvento.sparkExam
 
 case class AddressData(addressId: String, customerId: String, address: String) {
   def parseAddresses(): Address = {

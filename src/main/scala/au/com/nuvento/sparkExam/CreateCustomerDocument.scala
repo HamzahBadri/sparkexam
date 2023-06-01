@@ -1,8 +1,8 @@
-package com.sundogsoftware.spark
+package au.com.nuvento.sparkExam
 
 import org.apache.log4j._
-import org.apache.spark.sql.{SaveMode, SparkSession}
 import org.apache.spark.sql.functions._
+import org.apache.spark.sql.{SaveMode, SparkSession}
 
 object CreateCustomerDocument {
 
@@ -23,12 +23,10 @@ object CreateCustomerDocument {
       .csv("data/address_data.txt")
       .as[AddressData]
 
-    //val addressParsed = addressDataset.map(row => row.parseAddresses)
+    val addressParsed = addressDataset.map(row => row.parseAddresses)
 
     val customerAccountDataset = spark.read.parquet("data/CustomerAccountOutput")
-    customerAccountDataset.show(truncate = false)
 
-    /*
     var customerDictionary: Map[String, Seq[Address]] = Map()
 
     for (customerLine <- customerAccountDataset.collect()) {
@@ -45,9 +43,9 @@ object CreateCustomerDocument {
     val customerDocument = customerAccountDataset
       .select("customerId", "forename", "surname", "accounts")
       .withColumn("address", lookupAddressUdf(col("customerId")))
-    customerDocument.show(truncate = false)
-    //customerDocument.write.mode(SaveMode.Overwrite).parquet("data/CustomerDocument")
-    */
+      .as[CustomerDocument]
+    customerDocument.show()
+    customerDocument.write.mode("overwrite").parquet("data/CustomerDocument")
   }
 
 }
