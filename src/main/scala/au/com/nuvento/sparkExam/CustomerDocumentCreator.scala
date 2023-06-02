@@ -3,19 +3,14 @@ package au.com.nuvento.sparkExam
 import com.typesafe.config.ConfigFactory
 import org.apache.log4j._
 import org.apache.spark.sql.functions._
-import org.apache.spark.sql.{SaveMode, SparkSession}
+import org.apache.spark.sql.{Dataset, SparkSession}
 
-object CreateCustomerDocument {
+object CustomerDocumentCreator {
 
-  def main(args: Array[String]): Unit = {
+  def createCustomerDocument(customerAccountOutputPath: String, addressPath: String)
+  : Dataset[CustomerDocument] = {
 
     Logger.getLogger("org").setLevel(Level.ERROR)
-
-    val config = ConfigFactory.load("application.conf")
-      .getConfig("au.com.nuvento.sparkExam")
-    val addressPath = config.getString("addressPath")
-    val customerAccountOutputPath = config.getString("customerAccountOutputPath")
-    val customerDocumentPath = config.getString("customerDocumentPath")
 
     val spark = SparkSession
       .builder
@@ -54,7 +49,7 @@ object CreateCustomerDocument {
       .as[CustomerDocument]
 
     customerDocument.show()
-    customerDocument.write.mode("overwrite").parquet(customerDocumentPath)
+    customerDocument
   }
 
 }

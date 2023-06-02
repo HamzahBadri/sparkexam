@@ -1,21 +1,14 @@
 package au.com.nuvento.sparkExam
 
-import com.typesafe.config.ConfigFactory
 import org.apache.log4j._
-import org.apache.spark.sql.SparkSession
+import org.apache.spark.sql.{Dataset, SparkSession}
 import org.apache.spark.sql.functions._
 
-object CreateCustomerAccountOutput {
+object CustomerAccountOutputCreator {
 
-  def main(args: Array[String]): Unit = {
+  def createCustomerAccountOutput(customerPath: String, accountPath: String): Dataset[CustomerAccountOutput] = {
 
     Logger.getLogger("org").setLevel(Level.ERROR)
-
-    val config = ConfigFactory.load("application.conf")
-      .getConfig("au.com.nuvento.sparkExam")
-    val customerPath = config.getString("customerPath")
-    val accountPath = config.getString("accountPath")
-    val customerAccountOutputPath = config.getString("customerAccountOutputPath")
 
     val spark = SparkSession
       .builder
@@ -64,7 +57,8 @@ object CreateCustomerAccountOutput {
       .as[CustomerAccountOutput]
 
     customerAccountOutput.show(false)
-    customerAccountOutput.write.mode("overwrite").parquet(customerAccountOutputPath)
+    customerAccountOutput
+    //customerAccountOutput.write.mode("overwrite").parquet(customerAccountOutputPath)
   }
 
 }

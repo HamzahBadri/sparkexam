@@ -5,14 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b42012cf-cb54-406c-8403-0b6c5538f68e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.conf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/au/com/nuvento/sparkExam/CreateBothDocuments.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/scala/sparkExamTests/AddressDataTest.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/CustomerAccountOutput/.part-00000-e50f48db-2d26-4c5d-a2f2-6e0ebfeac4a4-c000.snappy.parquet.crc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/CustomerAccountOutput/part-00000-e50f48db-2d26-4c5d-a2f2-6e0ebfeac4a4-c000.snappy.parquet" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/CustomerDocument/.part-00000-6b0f3c5f-55be-4a92-972d-e35facc24a5d-c000.snappy.parquet.crc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/CustomerDocument/part-00000-6b0f3c5f-55be-4a92-972d-e35facc24a5d-c000.snappy.parquet" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/au/com/nuvento/sparkExam/CreateCustomerAccountOutput.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/au/com/nuvento/sparkExam/CreateCustomerAccountOutput.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/au/com/nuvento/sparkExam/CreateCustomerDocument.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/au/com/nuvento/sparkExam/CreateCustomerDocument.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/CustomerAccountOutput/.part-00000-82658ada-96a7-4f44-baca-df1d00e11587-c000.snappy.parquet.crc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/CustomerAccountOutput/part-00000-82658ada-96a7-4f44-baca-df1d00e11587-c000.snappy.parquet" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/customer_data.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/au/com/nuvento/sparkExam/App.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/au/com/nuvento/sparkExam/CreateCustomerAccountOutput.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/au/com/nuvento/sparkExam/CustomerAccountOutputCreator.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/au/com/nuvento/sparkExam/CreateCustomerDocument.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/au/com/nuvento/sparkExam/CustomerDocumentCreator.scala" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,12 +115,20 @@
       <option name="project" value="LOCAL" />
       <updated>1685600261332</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Resources folder &amp; turned nulls into 0s">
+      <created>1685642789263</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1685642789264</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Spark issues resolved except parquet" />
     <MESSAGE value="Parquet versions resolved" />
-    <option name="LAST_COMMIT_MESSAGE" value="Parquet versions resolved" />
+    <MESSAGE value="Resources folder &amp; turned nulls into 0s" />
+    <option name="LAST_COMMIT_MESSAGE" value="Resources folder &amp; turned nulls into 0s" />
   </component>
 </project>
