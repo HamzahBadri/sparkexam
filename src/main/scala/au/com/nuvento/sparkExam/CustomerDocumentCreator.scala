@@ -1,6 +1,5 @@
 package au.com.nuvento.sparkExam
 
-import com.typesafe.config.ConfigFactory
 import org.apache.log4j._
 import org.apache.spark.sql.functions._
 import org.apache.spark.sql.{Dataset, SparkSession}
@@ -25,21 +24,21 @@ object CustomerDocumentCreator {
       .csv(addressPath)
       .as[AddressData]
 
-    val addressParsed = addressDataset.map(row => row.parseAddresses)
+    val parsedAddressDataset = addressDataset.map(row => row.parseAddresses)
 
     val customerAccountDataset = spark.read.parquet(customerAccountOutputPath)
       .as[CustomerAccountOutput]
 
-    var customerDictionary: Map[String, Seq[Address]] = Map()
+    var addressDictionary: Map[String, Seq[Address]] = Map()
 
     for (customerLine <- customerAccountDataset.collect()) {
       val customerLineId = customerLine.customerId
-      val customerAddresses = addressParsed.filter($"customerId" === customerLineId)
-      val addressList = customerAddresses.collect().toSeq
-      customerDictionary += (customerLineId -> addressList)
+      val idAddresses = parsedAddressDataset.filter($"customerId" === customerLineId)
+      val idAddressList = idAddresses.collect().toSeq
+      addressDictionary += (customerLineId -> idAddressList)
     }
     val lookupAddress: String => Seq[Address] = (customerId: String) => {
-      customerDictionary(customerId)
+      addressDictionary(customerId)
     }
     val lookupAddressUdf = udf(lookupAddress)
 

@@ -1,0 +1,4 @@
+customerId,forename,surname
+IND0001,Christopher,Black
+IND0002,Madeleine,Kerr
+IND0003,Sarah,Skinner

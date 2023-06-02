@@ -31,28 +31,28 @@ object CustomerAccountOutputCreator {
       .csv(customerPath)
       .as[CustomerData]
 
-    var customerAccountDictionary: Map[String, Seq[AccountData]] = Map()
+    var accountDictionary: Map[String, Seq[AccountData]] = Map()
 
     for (customerLine <- customerDataset.collect()) {
       val customerLineId = customerLine.customerId
-      val customerAccounts = accountDataset.filter($"customerId" === customerLineId)
-      val accountList = customerAccounts.collect().toSeq
-      customerAccountDictionary += (customerLineId -> accountList)
+      val idAccounts = accountDataset.filter($"customerId" === customerLineId)
+      val idAccountList = idAccounts.collect().toSeq
+      accountDictionary += (customerLineId -> idAccountList)
     }
 
     val lookupAccount: String => Seq[AccountData] = (customerId: String) => {
-      customerAccountDictionary(customerId)
+      accountDictionary(customerId)
     }
     val lookupAccountUdf = udf(lookupAccount)
 
-    val accountInfoDatabase = accountDataset.groupBy("customerId").agg(
+    val accountInfoDataframe = accountDataset.groupBy("customerId").agg(
       count("customerId").alias("numberAccounts"),
       sum("balance").alias("totalBalance"),
       avg("balance").alias("averageBalance"))
 
     val customerAccountOutput = customerDataset
       .withColumn("accounts", lookupAccountUdf(col("customerId")))
-      .join(accountInfoDatabase, Seq("customerId"), "left")
+      .join(accountInfoDataframe, Seq("customerId"), "left")
       .na.fill(0)
       .as[CustomerAccountOutput]
 
