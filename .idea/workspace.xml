@@ -5,15 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b42012cf-cb54-406c-8403-0b6c5538f68e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/resources/account_data_test.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/address_data_test.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/customer_data_test.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/scala/sparkExamTests/CustomerAccountOutputTest.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/scala/sparkExamTests/CreateBothDocumentsTest.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/scala/sparkExamTests/CustomerDocumentTest.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/CustomerDocument/.part-00000-659e1101-bd7d-4ad2-a364-55e256edb1a3-c000.snappy.parquet.crc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/CustomerDocument/part-00000-659e1101-bd7d-4ad2-a364-55e256edb1a3-c000.snappy.parquet" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/CustomerAccountOutput/.part-00000-5cb3397f-5929-442c-8782-a4e853b4d416-c000.snappy.parquet.crc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/CustomerAccountOutput/part-00000-5cb3397f-5929-442c-8782-a4e853b4d416-c000.snappy.parquet" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/CustomerDocument/.part-00000-39aec361-a61a-4f78-a5be-a9ac52b1dfa1-c000.snappy.parquet.crc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/CustomerDocument/part-00000-39aec361-a61a-4f78-a5be-a9ac52b1dfa1-c000.snappy.parquet" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/au/com/nuvento/sparkExam/AddressData.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/au/com/nuvento/sparkExam/AddressData.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/au/com/nuvento/sparkExam/CreateBothDocuments.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/au/com/nuvento/sparkExam/CreateBothDocuments.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/au/com/nuvento/sparkExam/CustomerAccountOutput.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/au/com/nuvento/sparkExam/CustomerAccountOutputRow.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/au/com/nuvento/sparkExam/CustomerAccountOutputCreator.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/au/com/nuvento/sparkExam/CustomerAccountOutputCreator.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/au/com/nuvento/sparkExam/CustomerDocument.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/au/com/nuvento/sparkExam/CustomerDocumentRow.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/au/com/nuvento/sparkExam/CustomerDocumentCreator.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/au/com/nuvento/sparkExam/CustomerDocumentCreator.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/address_data_test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/address_data_test.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +76,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "configurable.group.tools"
+    "settings.editor.selected.configurable": "preferences.editor.code.editing"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -134,7 +139,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685703083451</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Half the tests finished and formatting touch ups">
+      <created>1685712605301</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1685712605301</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -142,6 +154,7 @@
     <MESSAGE value="Parquet versions resolved" />
     <MESSAGE value="Resources folder &amp; turned nulls into 0s" />
     <MESSAGE value="First tests &amp; re-added customer_data.txt" />
-    <option name="LAST_COMMIT_MESSAGE" value="First tests &amp; re-added customer_data.txt" />
+    <MESSAGE value="Half the tests finished and formatting touch ups" />
+    <option name="LAST_COMMIT_MESSAGE" value="Half the tests finished and formatting touch ups" />
   </component>
 </project>

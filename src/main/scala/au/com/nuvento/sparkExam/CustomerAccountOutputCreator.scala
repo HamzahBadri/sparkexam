@@ -4,9 +4,20 @@ import org.apache.log4j._
 import org.apache.spark.sql.{Dataset, SparkSession}
 import org.apache.spark.sql.functions._
 
+/**
+ * An object for creating the CustomerAccountOutput dataset
+ */
 object CustomerAccountOutputCreator {
 
-  def createCustomerAccountOutput(customerPath: String, accountPath: String): Dataset[CustomerAccountOutput] = {
+  /**
+   * Aggregates a dataset of customers with a dataset of accounts,
+   * matching accounts to their appropriate customer.
+   * @param customerPath the path to the customer data
+   * @param accountPath the path to the account data
+   * @return a Dataset where each row is a CustomerAccountOutputRow
+   */
+  def createCustomerAccountOutput(customerPath: String, accountPath: String):
+  Dataset[CustomerAccountOutputRow] = {
 
     Logger.getLogger("org").setLevel(Level.ERROR)
 
@@ -54,11 +65,10 @@ object CustomerAccountOutputCreator {
       .withColumn("accounts", lookupAccountUdf(col("customerId")))
       .join(accountInfoDataframe, Seq("customerId"), "left")
       .na.fill(0)
-      .as[CustomerAccountOutput]
+      .as[CustomerAccountOutputRow]
 
     customerAccountOutput.show(false)
     customerAccountOutput
-    //customerAccountOutput.write.mode("overwrite").parquet(customerAccountOutputPath)
   }
 
 }
