@@ -58,7 +58,7 @@ object CustomerDocumentCreator {
       .withColumn("address", lookupAddressUdf(col("customerId")))
       .as[CustomerDocumentRow]
 
-    customerDocument.show()
+    //customerDocument.show()
     customerDocument
   }
 

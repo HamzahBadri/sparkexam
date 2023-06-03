@@ -67,7 +67,7 @@ object CustomerAccountOutputCreator {
       .na.fill(0)
       .as[CustomerAccountOutputRow]
 
-    customerAccountOutput.show(false)
+    //customerAccountOutput.show(false)
     customerAccountOutput
   }
 
