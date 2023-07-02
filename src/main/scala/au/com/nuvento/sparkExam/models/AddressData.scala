@@ -1,4 +1,4 @@
-package au.com.nuvento.sparkExam
+package au.com.nuvento.sparkExam.models
 
 case class AddressData(addressId: String, customerId: String, address: String) {
 

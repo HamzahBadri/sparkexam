@@ -1,5 +1,0 @@
-addressId,customerId,address
-ADR001,IND0001,"302, De Grassi Street, Toronto, Canada"
-ADR002,IND0002,"344, Oxford Street, London, United Kingdom"
-ADR003,IND0001,"613, Sukhumvit Soi, Bangkok, Thailand"
-ADR004,IND0003,"120, Carnaby Street, London, United Kingdom"

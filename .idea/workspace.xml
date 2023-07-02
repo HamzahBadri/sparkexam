@@ -5,20 +5,43 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b42012cf-cb54-406c-8403-0b6c5538f68e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/scala/sparkExamTests/CreateBothDocumentsTest.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/scala/sparkExamTests/CustomerDocumentTest.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/au/com/nuvento/sparkExam/models/package-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/au/com/nuvento/sparkExam/utils/DictionaryUtils.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/au/com/nuvento/sparkExam/utils/FileUtils.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/au/com/nuvento/sparkExam/utils/SparkUtils.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/scala/au/com/nuvento/sparkExam/utils/package-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/scala/au/com/nuvento/sparkExam/utils/DictionaryUtilsTest.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/scala/au/com/nuvento/sparkExam/utils/FileUtilsTest.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/scala/au/com/nuvento/sparkExam/utils/SparkUtilsTest.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/CustomerAccountOutput/.part-00000-5cb3397f-5929-442c-8782-a4e853b4d416-c000.snappy.parquet.crc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/CustomerAccountOutput/part-00000-5cb3397f-5929-442c-8782-a4e853b4d416-c000.snappy.parquet" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/CustomerDocument/.part-00000-39aec361-a61a-4f78-a5be-a9ac52b1dfa1-c000.snappy.parquet.crc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/CustomerDocument/part-00000-39aec361-a61a-4f78-a5be-a9ac52b1dfa1-c000.snappy.parquet" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/au/com/nuvento/sparkExam/AddressData.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/au/com/nuvento/sparkExam/AddressData.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/CustomerAccountOutput/._SUCCESS.crc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/CustomerAccountOutput/.part-00000-8af45eb0-2130-4e1e-8eec-e5cb7a00d3bf-c000.snappy.parquet.crc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/CustomerAccountOutput/_SUCCESS" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/test_dataframe.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/CustomerAccountOutput/part-00000-8af45eb0-2130-4e1e-8eec-e5cb7a00d3bf-c000.snappy.parquet" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/CustomerDocument/._SUCCESS.crc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/CustomerDocument/.part-00000-16d3a9e7-6532-455e-a8da-72b8d1b019eb-c000.snappy.parquet.crc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/CustomerDocument/_SUCCESS" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/CustomerDocument/part-00000-16d3a9e7-6532-455e-a8da-72b8d1b019eb-c000.snappy.parquet" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/au/com/nuvento/sparkExam/AccountData.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/au/com/nuvento/sparkExam/models/AccountData.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/au/com/nuvento/sparkExam/Address.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/au/com/nuvento/sparkExam/models/Address.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/au/com/nuvento/sparkExam/AddressData.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/au/com/nuvento/sparkExam/models/AddressData.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/au/com/nuvento/sparkExam/CreateBothDocuments.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/au/com/nuvento/sparkExam/CreateBothDocuments.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/au/com/nuvento/sparkExam/CustomerAccountOutput.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/au/com/nuvento/sparkExam/CustomerAccountOutputRow.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/au/com/nuvento/sparkExam/CustomerAccountOutputCreator.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/au/com/nuvento/sparkExam/CustomerAccountOutputCreator.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/au/com/nuvento/sparkExam/CustomerDocument.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/au/com/nuvento/sparkExam/CustomerDocumentRow.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/au/com/nuvento/sparkExam/CustomerAccountOutputRow.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/au/com/nuvento/sparkExam/models/CustomerAccountOutputRow.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/au/com/nuvento/sparkExam/CustomerData.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/au/com/nuvento/sparkExam/models/CustomerData.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/au/com/nuvento/sparkExam/CustomerDocumentCreator.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/au/com/nuvento/sparkExam/CustomerDocumentCreator.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/address_data_test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/address_data_test.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/au/com/nuvento/sparkExam/CustomerDocumentRow.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/au/com/nuvento/sparkExam/models/CustomerDocumentRow.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/CustomerAccountOutputTest/._SUCCESS.crc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/CustomerAccountOutputTest/.part-00000-be8727c7-9713-4418-affc-473f06685494-c000.snappy.parquet.crc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/CustomerAccountOutputTest/_SUCCESS" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/CustomerAccountOutputTest/part-00000-be8727c7-9713-4418-affc-473f06685494-c000.snappy.parquet" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/account_data_test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/address_data_test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/customer_data_test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/scala/sparkExamTests/AddressDataTest.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/au/com/nuvento/sparkExam/models/AddressDataTest.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/scala/sparkExamTests/CreateBothDocumentsTest.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/scala/sparkExamTests/CustomerAccountOutputTest.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/au/com/nuvento/sparkExam/CustomerAccountOutputTest.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/scala/sparkExamTests/CustomerDocumentTest.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/au/com/nuvento/sparkExam/CustomerDocumentTest.scala" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +51,12 @@
   <component name="CodeStyleSettingsInfer">
     <option name="done" value="true" />
   </component>
+  <component name="CoverageOptionsProvider">
+    <option name="myAddOrReplace" value="0" />
+  </component>
+  <component name="ExportToHTMLSettings">
+    <option name="OUTPUT_DIRECTORY" value="C:\Users\Hamzah\Desktop\DataAcademy\sparkExam\htmlReport" />
+  </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -36,8 +65,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Package Object" />
         <option value="Scala Class" />
+        <option value="package-info" />
+        <option value="Package Object" />
       </list>
     </option>
   </component>
@@ -68,20 +98,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/Hamzah/Desktop/DataAcademy/sparkExam/src/test/resources",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.editor.code.editing"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Hamzah/Desktop/DataAcademy/sparkExam/src/test/resources&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.editor.code.editing&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Hamzah\Desktop\DataAcademy\sparkExam\src\test\resources" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="au.com.nuvento.sparkExam.caseClasses" />
     </key>
   </component>
   <component name="RunManager">
@@ -146,7 +179,21 @@
       <option name="project" value="LOCAL" />
       <updated>1685712605301</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Final working commit">
+      <created>1685767022962</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1685767022962</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Commented out show">
+      <created>1685767079184</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1685767079184</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -155,6 +202,31 @@
     <MESSAGE value="Resources folder &amp; turned nulls into 0s" />
     <MESSAGE value="First tests &amp; re-added customer_data.txt" />
     <MESSAGE value="Half the tests finished and formatting touch ups" />
-    <option name="LAST_COMMIT_MESSAGE" value="Half the tests finished and formatting touch ups" />
+    <MESSAGE value="Final working commit" />
+    <MESSAGE value="Commented out show" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commented out show" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/sparkexam$SparkUtilsTest.ic" NAME="SparkUtilsTest Coverage Results" MODIFIED="1688281013402" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>au.com.nuvento.sparkExam.utils.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/sparkexam$CustomerAccountOutputTest.ic" NAME="CustomerAccountOutputTest Coverage Results" MODIFIED="1688280766068" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>au.com.nuvento.sparkExam.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/sparkexam$FileUtilsTest.ic" NAME="FileUtilsTest Coverage Results" MODIFIED="1688280861421" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>au.com.nuvento.sparkExam.utils.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/sparkexam$AddressDataTest.ic" NAME="AddressDataTest Coverage Results" MODIFIED="1688175307283" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>au.com.nuvento.sparkExam.models.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/sparkexam$CreateBothDocuments.ic" NAME="CreateBothDocuments Coverage Results" MODIFIED="1688281962463" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>au.com.nuvento.sparkExam.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/sparkexam$CustomerDocumentTest.ic" NAME="CustomerDocumentTest Coverage Results" MODIFIED="1688282707306" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>au.com.nuvento.sparkExam.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/sparkexam$DictionaryUtilsTest.ic" NAME="DictionaryUtilsTest Coverage Results" MODIFIED="1688280961303" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>au.com.nuvento.sparkExam.utils.*</FILTER>
+    </SUITE>
   </component>
 </project>

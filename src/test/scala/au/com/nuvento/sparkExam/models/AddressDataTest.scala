@@ -1,8 +1,7 @@
-package sparkExamTests
+package au.com.nuvento.sparkExam.models
 
+import org.junit.Assert._
 import org.junit._
-import Assert._
-import au.com.nuvento.sparkExam.AddressData
 
 @Test
 class AddressDataTest {
@@ -11,8 +10,8 @@ class AddressDataTest {
   def parseAddressTest() = {
     val testAddress = AddressData("ADR001","IND0148","302, De Grassi Street, Toronto, Canada")
     val parsedTestAddress = testAddress.parseAddresses()
-    assertEquals(parsedTestAddress.addressId, testAddress.addressId)
-    assertEquals(parsedTestAddress.customerId, testAddress.customerId)
+    assertEquals(parsedTestAddress.addressId, "ADR001")
+    assertEquals(parsedTestAddress.customerId, "IND0148")
     assertEquals(parsedTestAddress.streetNumber, 302)
     assertEquals(parsedTestAddress.street, "De Grassi Street")
     assertEquals(parsedTestAddress.city, "Toronto")
