@@ -4,44 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b42012cf-cb54-406c-8403-0b6c5538f68e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/scala/au/com/nuvento/sparkExam/models/package-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/au/com/nuvento/sparkExam/utils/DictionaryUtils.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/au/com/nuvento/sparkExam/utils/FileUtils.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/au/com/nuvento/sparkExam/utils/SparkUtils.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/au/com/nuvento/sparkExam/utils/package-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/scala/au/com/nuvento/sparkExam/utils/DictionaryUtilsTest.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/scala/au/com/nuvento/sparkExam/utils/FileUtilsTest.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/scala/au/com/nuvento/sparkExam/utils/SparkUtilsTest.scala" afterDir="false" />
+    <list default="true" id="b42012cf-cb54-406c-8403-0b6c5538f68e" name="Changes" comment="Identified">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/CustomerAccountOutput/._SUCCESS.crc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/CustomerAccountOutput/.part-00000-8af45eb0-2130-4e1e-8eec-e5cb7a00d3bf-c000.snappy.parquet.crc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/CustomerAccountOutput/_SUCCESS" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/test_dataframe.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/CustomerAccountOutput/part-00000-8af45eb0-2130-4e1e-8eec-e5cb7a00d3bf-c000.snappy.parquet" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/CustomerDocument/._SUCCESS.crc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/CustomerDocument/.part-00000-16d3a9e7-6532-455e-a8da-72b8d1b019eb-c000.snappy.parquet.crc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/CustomerDocument/_SUCCESS" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/CustomerDocument/part-00000-16d3a9e7-6532-455e-a8da-72b8d1b019eb-c000.snappy.parquet" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/au/com/nuvento/sparkExam/AccountData.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/au/com/nuvento/sparkExam/models/AccountData.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/au/com/nuvento/sparkExam/Address.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/au/com/nuvento/sparkExam/models/Address.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/au/com/nuvento/sparkExam/AddressData.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/au/com/nuvento/sparkExam/models/AddressData.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/au/com/nuvento/sparkExam/CreateBothDocuments.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/au/com/nuvento/sparkExam/CreateBothDocuments.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/au/com/nuvento/sparkExam/CustomerAccountOutputCreator.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/au/com/nuvento/sparkExam/CustomerAccountOutputCreator.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/au/com/nuvento/sparkExam/CustomerAccountOutputRow.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/au/com/nuvento/sparkExam/models/CustomerAccountOutputRow.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/au/com/nuvento/sparkExam/CustomerData.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/au/com/nuvento/sparkExam/models/CustomerData.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/au/com/nuvento/sparkExam/CustomerDocumentCreator.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/au/com/nuvento/sparkExam/CustomerDocumentCreator.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/au/com/nuvento/sparkExam/CustomerDocumentRow.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/au/com/nuvento/sparkExam/models/CustomerDocumentRow.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/CustomerAccountOutputTest/._SUCCESS.crc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/CustomerAccountOutputTest/.part-00000-be8727c7-9713-4418-affc-473f06685494-c000.snappy.parquet.crc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/CustomerAccountOutputTest/_SUCCESS" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/CustomerAccountOutputTest/part-00000-be8727c7-9713-4418-affc-473f06685494-c000.snappy.parquet" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/account_data_test.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/address_data_test.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/customer_data_test.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/scala/sparkExamTests/AddressDataTest.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/au/com/nuvento/sparkExam/models/AddressDataTest.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/scala/sparkExamTests/CreateBothDocumentsTest.scala" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/scala/sparkExamTests/CustomerAccountOutputTest.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/au/com/nuvento/sparkExam/CustomerAccountOutputTest.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/scala/sparkExamTests/CustomerDocumentTest.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/au/com/nuvento/sparkExam/CustomerDocumentTest.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/scala/au/com/nuvento/sparkExam/CustomerAccountOutputTest.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/au/com/nuvento/sparkExam/CustomerAccountOutputTest.scala" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -193,7 +158,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685767079184</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Improved packaging and testing">
+      <created>1688284199806</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1688284199807</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -204,7 +176,8 @@
     <MESSAGE value="Half the tests finished and formatting touch ups" />
     <MESSAGE value="Final working commit" />
     <MESSAGE value="Commented out show" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commented out show" />
+    <MESSAGE value="Improved packaging and testing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Improved packaging and testing" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/sparkexam$SparkUtilsTest.ic" NAME="SparkUtilsTest Coverage Results" MODIFIED="1688281013402" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
